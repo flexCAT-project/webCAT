@@ -7,6 +7,12 @@ website:
   favicon: images/favicon.png
   back-to-top-navigation: true
   page-footer: "Copyright 2026"
+  announcement:
+    icon: info-circle
+    dismissable: false
+    type: warning
+    position: below-navbar
+    content: "**Beta version.** If you encounter errors, please [open an issue on GitHub](https://github.com/flexcat-project/webCAT/issues)."
   navbar:
     left:
       - href: index.qmd
@@ -21,9 +27,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href:  https://github.com/tasospsy/webCAT
+            href:  https://github.com/flexcat-project/webCAT
           - text: Report a Bug
-            href:  https://github.com/tasospsy/webCAT/issues
+            href:  https://github.com/flexcat-project/webCAT/issues
   
   
 format:
