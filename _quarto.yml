@@ -34,12 +34,14 @@ website:
   
 format:
   html:
-    theme: flatly
+    theme: 
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true
     code-fold: true
     page-layout: full
-
+    respect-user-color-scheme: true
     
 editor: visual
 
