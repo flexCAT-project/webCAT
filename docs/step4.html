@@ -357,14 +357,15 @@ function downloadData() {
   const ResultsFileName = params.catName + "-results.csv";
   
   //Qualtrics part 
-  const qualtrics = {
-    surveyName: document.getElementById("surveyNameInput").value,
-    qualtricsToken : document.getElementById("qualtricsToken").value;
-  };
-  
+  // const qualtrics = {
+  //   surveyName: document.getElementById("surveyNameInput").value,
+  //   qualtricsToken: document.getElementById("qualtricsToken").value
+  // };
+
   if (!token || !params.catName) {
-  alert("Please fill in all required fields: Access Token & Test Name.");
-    }
+    alert("Please fill in all required fields: Access Token & Test Name.");
+    return;
+  }
   
   let url = `https://qualcat.duckdns.org/api/v0/get-data?catName=${encodeURIComponent(params.catName)}&from=${encodeURIComponent(params.from)}&to=${encodeURIComponent(params.to)}`
 
