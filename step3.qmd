@@ -52,9 +52,9 @@ Then repeat the process for the second question, entering the access token that 
 Here we follow the PPSE by entering `PPSE` as the test name and `Tok1234` as the access token. For the TCAT: Enter `TCAT` as the test name and `Tok1234` as the access token.
 :::
 
-![](images2/n8.png)
+![](images2/n8.png){width="900"}
 
-![](images2/n9.png)
+![](images2/n9.png){width="900"}
 
 Then select the **'Access Token'** question and click the JavaScript option on the left side panel.
 
@@ -133,7 +133,6 @@ Qualtrics.SurveyEngine.addOnload(function() {
       // empty for now
   };
   
-  //console.log(answers);
     // CALL
     fetch("https://qualcat.duckdns.org/api/v0/init", {
     method: "POST",
@@ -220,7 +219,7 @@ For typical-performance test, like the PPSE example we demonstrate here, DO NOT 
 
 -   Select the question in the 'Question' block.
 
--   Select the **'Choice randomization'** optionin the left side panel.
+-   Select the **'Choice randomization'** option in the left side panel.
 
 -   Then choose '**Display answers in a random order**' and click '**Save**'.
 
@@ -266,8 +265,8 @@ Qualtrics.SurveyEngine.addOnload(function()
     Qualtrics.SurveyEngine.setEmbeddedData("iter", data.iter);
     Qualtrics.SurveyEngine.setEmbeddedData("next_q", data.item);
     Qualtrics.SurveyEngine.setEmbeddedData("item_num", data.item_num);
-    Qualtrics.SurveyEngine.setEmbeddedData("se_thetahat", data.se_thetahat);
-    Qualtrics.SurveyEngine.setEmbeddedData("thetahat", data.thetahat);  
+    Qualtrics.SurveyEngine.setEmbeddedData("SE_Score_" + catName, data.se_thetahat);
+    Qualtrics.SurveyEngine.setEmbeddedData("Score_" + catName, data.thetahat);  
     Qualtrics.SurveyEngine.setEmbeddedData("pat", data.pat);
     Qualtrics.SurveyEngine.setEmbeddedData("J", data.pat.length);
     Qualtrics.SurveyEngine.setEmbeddedData("adm_items", data.iter);
@@ -294,8 +293,8 @@ Click the drop down **Tools** Tab and select **Show internal IDs**.
 
 Make sure that the internal ID of the question in the "Question" block, `QID7` in this example, matches the text in the fourth line of the script you entered before (i.e., `"${q://QID7/SelectedChoicesRecode}"`). If not, edit the script by entering the correct internal ID.
 
-::: {.columns}
-::: {.column width="40%"}
+::: columns
+::: {.column width="30%"}
 ![](images2/n22.png){width="100%"}
 :::
 
@@ -321,25 +320,25 @@ In the **Init** block, click **Add Below** and select **Group**.
 
 ![](images2/n26.png)
 
-Rename the new group as 'Loop' .
+Rename the new group as '*Loop*' .
 
-Then in the **Question** block click the **Move** button.
+Under the **Group: Loop**, in the **Question** block click the **Move** button.
 
 ![](images2/n27.png)
 
-Move the **Question** block under the **Loop** groupby dragging it.
+Move the **Question** block under the **Group: Loop** by dragging it.
 
 ![](images2/n28.png)
 
-The **Question** block is now part of the Loop group.
+The **Question** block is now part of the **Group: Loop**.
 
 ![](images2/n29.png)
 
-Similarly, move for the **CAT** block into the **Loop** group, under the **Question** block.
+Similarly, move for the **CAT** block into the **Group: Loop**, and place it under the **Question** block.
 
 ![](images2/n30.png)
 
-Then click **+ Add a New Element** here under the **CAT** block, inside the **Loop** group and select **Branch**.
+Then click **+ Add a New Element** under the **CAT** block, inside the **Group: Loop** and select **Branch**.
 
 ![](images2/n31.png)
 
@@ -373,11 +372,11 @@ The survey flow should now look like this
 
 ------------------------------------------------------------------------
 
-Now, click the button **Duplicate** next to the loop group, **as many times as the available total number of items.** For this example, the PPSE item bank has a total of 19 items, therefore click the **Duplicate** button 19 times.
+Now, click the button **Duplicate** next to the **Group: Loop**, [**as many times as the available total number of items**]{.underline}**.** For this example, the PPSE item bank has a total of 19 items, therefore click the **Duplicate** button 19 times.
 
 ![](images2/n37.png)
 
-Scrolling down the Loop group should be duplicated 19 times.
+Scrolling down, the **Group: Loop** should be duplicated 19 times.
 
 ![](images2/flow.gif)
 
