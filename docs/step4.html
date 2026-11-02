@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Get Results – webCAT</title>
+<title>step4 – webCAT</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -321,38 +321,22 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Get Results</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <p>After data collection, you can access the data through your Qualtrics account, as with any other Qualtrics survey. However, one last step adds the score and its standard error to the results table.</p>
 <p>Go to the <strong>Data &amp; Analysis</strong> tab.</p>
-<p><img src="images2/nn4.png" class="img-fluid" width="700"></p>
+<p><img src="images2/nn4.png" class="img-fluid" width="500"></p>
 <p>Click <strong>Column chooser</strong> → <strong>Embedded data</strong>, and select the <code>Score_&lt;Name&gt;</code> and <code>SE_Score_&lt;Name&gt;</code> fields so they appear as columns in the table.</p>
-<p><img src="images2/nn5.png" class="img-fluid"></p>
+<p><img src="images2/nn5.png" class="img-fluid" width="600"></p>
 <p>The two values then appear alongside the other answers, as in the example response below.</p>
-<p><img src="images2/nn6.png" class="img-fluid"></p>
+<p><img src="images2/nn6.png" class="img-fluid" width="500"></p>
 <hr>
 <p>With this Qualtrics setup, the responses to each administered item are not stored in Qualtrics. Researchers who need these responses can download them as a separate CSV file using the form below:</p>
-<p>Enter the Test Name and the Access Token to download the results. Optionally, you can limit the results to a date range.</p>
+<p>Enter the Test Name and the Access Token to download the responses. Optionally, you can limit the results to a date range.</p>
 <script>
 function downloadData() {
   const token = document.getElementById("AccessToken").value;

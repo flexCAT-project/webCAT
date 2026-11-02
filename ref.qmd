@@ -1,5 +1,44 @@
 ---
-title: "Reference"
+title: "References"
+bibliography: references.bib
+nocite: |
+  @Psychogyiopoulos_etal_2026_Qualtrics, @Chalmers_2012_mirt, @Chalmers_2016_mirtCAT
 ---
 
-# Reference {#sec-ref}
+## How to cite
+
+If you use this application in your research, please cite:
+
+::: callout-note
+Psychogyiopoulos, A., Smits, N., Booij, G. J., & van der Ark, L. A. (2026).
+*Implementing computerized adaptive testing in Qualtrics: Why, how, and an
+online tutorial for researchers* [Manuscript submitted for publication].
+:::
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@unpublished{Psychogyiopoulos_etal_2026_Qualtrics,
+  author   = {Psychogyiopoulos, Anastasios and Smits, Niels and Booij, Goan J. and {van der Ark}, L. Andries},
+  date     = {2026},
+  title    = {Implementing Computerized Adaptive Testing in {Qualtrics}},
+  subtitle = {Why, How, and an Online Tutorial for Researchers},
+  pubstate = {submitted},
+  note     = {Manuscript submitted for publication}
+}
+```
+
+</details>
+
+## Acknowledgements
+
+This application is built on the R packages **mirt** [@Chalmers_2012_mirt]
+and **mirtCAT** [@Chalmers_2016_mirtCAT], which provide the item response
+theory estimation and adaptive testing engine behind it. We thank their
+author for making them openly available.
+
+## Bibliography
+
+::: {#refs}
+:::

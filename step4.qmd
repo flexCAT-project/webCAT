@@ -1,26 +1,26 @@
 ---
-title: "Get Results"
+title: ""
 ---
 
 After data collection, you can access the data through your Qualtrics account, as with any other Qualtrics survey. However, one last step adds the score and its standard error to the results table.
 
 Go to the **Data & Analysis** tab.
 
-![](images2/nn4.png){width="700"}
+![](images2/nn4.png){width="500"}
 
 Click **Column chooser** → **Embedded data**, and select the `Score_<Name>` and `SE_Score_<Name>` fields so they appear as columns in the table.
 
-![](images2/nn5.png)
+![](images2/nn5.png){width="600"}
 
 The two values then appear alongside the other answers, as in the example response below.
 
-![](images2/nn6.png)
+![](images2/nn6.png){width="500"}
 
 ------------------------------------------------------------------------
 
 With this Qualtrics setup, the responses to each administered item are not stored in Qualtrics. Researchers who need these responses can download them as a separate CSV file using the form below:
 
-Enter the Test Name and the Access Token to download the results. Optionally, you can limit the results to a date range.
+Enter the Test Name and the Access Token to download the responses. Optionally, you can limit the results to a date range.
 
 ```{=html}
 <script>
