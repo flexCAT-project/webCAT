@@ -1,5 +1,5 @@
 ---
-title: "References"
+title: ""
 bibliography: references.bib
 nocite: |
   @Psychogyiopoulos_etal_2026_Qualtrics, @Chalmers_2012_mirt, @Chalmers_2016_mirtCAT
