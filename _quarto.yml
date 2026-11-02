@@ -22,7 +22,7 @@ website:
       - href: step4.qmd
         text: Results
       - href: ref.qmd
-        text: Reference
+        text: Info
     tools:
       - icon: github
         menu:

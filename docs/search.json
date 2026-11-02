@@ -65,9 +65,9 @@
   {
     "objectID": "step4.html",
     "href": "step4.html",
-    "title": "Get Results",
+    "title": "webCAT",
     "section": "",
-    "text": "After data collection, you can access the data through your Qualtrics account, as with any other Qualtrics survey. However, one last step adds the score and its standard error to the results table.\nGo to the Data & Analysis tab.\n\nClick Column chooser → Embedded data, and select the Score_&lt;Name&gt; and SE_Score_&lt;Name&gt; fields so they appear as columns in the table.\n\nThe two values then appear alongside the other answers, as in the example response below.\n\n\nWith this Qualtrics setup, the responses to each administered item are not stored in Qualtrics. Researchers who need these responses can download them as a separate CSV file using the form below:\nEnter the Test Name and the Access Token to download the results. Optionally, you can limit the results to a date range.\n\n\n  \n  \n   \n    \n    \n    Test Name*\n    \n  \n  \n  \n    \n    \n    Access Token*\n    \n  \n \n   \n  \n  Download Responses\n  \n  \n  \n\n  \n  \n    \n    From Date\n    \n    \n  \n  \n  \n    \n    To Date\n    \n    \n  \n      \n  \n\n\n\n\n\n\n\nNote\n\n\n\nFor the TCAT: Enter TCAT as the test name and Tok1234 as the access token.\nFor the PPSE: Enter PPSE as the test name and Tok1234 as the access token.\n\n\n\n\n\n Back to top"
+    "text": "After data collection, you can access the data through your Qualtrics account, as with any other Qualtrics survey. However, one last step adds the score and its standard error to the results table.\nGo to the Data & Analysis tab.\n\nClick Column chooser → Embedded data, and select the Score_&lt;Name&gt; and SE_Score_&lt;Name&gt; fields so they appear as columns in the table.\n\nThe two values then appear alongside the other answers, as in the example response below.\n\n\nWith this Qualtrics setup, the responses to each administered item are not stored in Qualtrics. Researchers who need these responses can download them as a separate CSV file using the form below:\nEnter the Test Name and the Access Token to download the responses. Optionally, you can limit the results to a date range.\n\n\n  \n  \n   \n    \n    \n    Test Name*\n    \n  \n  \n  \n    \n    \n    Access Token*\n    \n  \n \n   \n  \n  Download Responses\n  \n  \n  \n\n  \n  \n    \n    From Date\n    \n    \n  \n  \n  \n    \n    To Date\n    \n    \n  \n      \n  \n\n\n\n\n\n\n\nNote\n\n\n\nFor the TCAT: Enter TCAT as the test name and Tok1234 as the access token.\nFor the PPSE: Enter PPSE as the test name and Tok1234 as the access token.\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "step1.html",
@@ -93,8 +93,29 @@
   {
     "objectID": "ref.html",
     "href": "ref.html",
-    "title": "Reference",
+    "title": "webCAT",
     "section": "",
-    "text": "Reference\n\n\n\n\n Back to top"
+    "text": "If you use this application in your research, please cite:\n\n\n\n\n\n\nNote\n\n\n\nPsychogyiopoulos, A., Smits, N., Booij, G. J., & van der Ark, L. A. (2026). Implementing computerized adaptive testing in Qualtrics: Why, how, and an online tutorial for researchers [Manuscript submitted for publication].\n\n\n\n\nBibTeX\n\n@unpublished{Psychogyiopoulos_etal_2026_Qualtrics,\n  author   = {Psychogyiopoulos, Anastasios and Smits, Niels and Booij, Goan J. and {van der Ark}, L. Andries},\n  date     = {2026},\n  title    = {Implementing Computerized Adaptive Testing in {Qualtrics}},\n  subtitle = {Why, How, and an Online Tutorial for Researchers},\n  pubstate = {submitted},\n  note     = {Manuscript submitted for publication}\n}"
+  },
+  {
+    "objectID": "ref.html#how-to-cite",
+    "href": "ref.html#how-to-cite",
+    "title": "webCAT",
+    "section": "",
+    "text": "If you use this application in your research, please cite:\n\n\n\n\n\n\nNote\n\n\n\nPsychogyiopoulos, A., Smits, N., Booij, G. J., & van der Ark, L. A. (2026). Implementing computerized adaptive testing in Qualtrics: Why, how, and an online tutorial for researchers [Manuscript submitted for publication].\n\n\n\n\nBibTeX\n\n@unpublished{Psychogyiopoulos_etal_2026_Qualtrics,\n  author   = {Psychogyiopoulos, Anastasios and Smits, Niels and Booij, Goan J. and {van der Ark}, L. Andries},\n  date     = {2026},\n  title    = {Implementing Computerized Adaptive Testing in {Qualtrics}},\n  subtitle = {Why, How, and an Online Tutorial for Researchers},\n  pubstate = {submitted},\n  note     = {Manuscript submitted for publication}\n}"
+  },
+  {
+    "objectID": "ref.html#acknowledgements",
+    "href": "ref.html#acknowledgements",
+    "title": "webCAT",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThis application is built on the R packages mirt (Chalmers 2012) and mirtCAT (Chalmers 2016), which provide the item response theory estimation and adaptive testing engine behind it. We thank their author for making them openly available."
+  },
+  {
+    "objectID": "ref.html#bibliography",
+    "href": "ref.html#bibliography",
+    "title": "webCAT",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\nChalmers, R. Philip. 2012. “mirt: A Multidimensional Item Response Theory Package for the R Environment.” Journal of Statistical Software 48 (6): 1–29. https://doi.org/10.18637/jss.v048.i06.\n\n\nChalmers, R. Philip. 2016. “Generating Adaptive and Non-Adaptive Test Interfaces for Multidimensional Item Response Theory Applications.” Journal of Statistical Software 71 (5): 1–38. https://doi.org/10.18637/jss.v071.i05.\n\n\nPsychogyiopoulos, Anastasios, Niels Smits, Goan J. Booij, and L. Andries van der Ark. 2026. “Implementing Computerized Adaptive Testing in Qualtrics: Why, How, and an Online Tutorial for Researchers.” Unpublished manuscript. Submitted."
   }
 ]
