@@ -245,8 +245,8 @@ Qualtrics.SurveyEngine.addOnload(function()
     q_resp: "${q://QID7/SelectedChoicesRecode}",
     item_num: "${e://Field/item_num}"
   };
-  
-  console.log("API sent:", answers);
+  const catName = "${q://QID1/ChoiceTextEntryValue}"; // CAT name
+  //console.log("API sent:", answers);
     // CALL
     fetch("https://qualcat.duckdns.org/api/v0/cat", {
     method: "POST",
@@ -265,8 +265,8 @@ Qualtrics.SurveyEngine.addOnload(function()
     Qualtrics.SurveyEngine.setEmbeddedData("iter", data.iter);
     Qualtrics.SurveyEngine.setEmbeddedData("next_q", data.item);
     Qualtrics.SurveyEngine.setEmbeddedData("item_num", data.item_num);
-    Qualtrics.SurveyEngine.setEmbeddedData("SE_Score_" + catName, data.se_thetahat);
-    Qualtrics.SurveyEngine.setEmbeddedData("Score_" + catName, data.thetahat);  
+        Qualtrics.SurveyEngine.setEmbeddedData("SE_Score_" + catName, data["SE_Score_" + catName]);
+    Qualtrics.SurveyEngine.setEmbeddedData("Score_" + catName, data["Score_" + catName]); 
     Qualtrics.SurveyEngine.setEmbeddedData("pat", data.pat);
     Qualtrics.SurveyEngine.setEmbeddedData("J", data.pat.length);
     Qualtrics.SurveyEngine.setEmbeddedData("adm_items", data.iter);
