@@ -92,7 +92,7 @@ This does not serve as an actual question; rather, it displays all the necessary
 
 In this example we add some plain text for illustrative purpose:
 
-![](images/Screenshot%202025-12-19%20at%2008.18.16.png)
+![](images2/n12_5.png)
 
 ------------------------------------------------------------------------
 
@@ -245,8 +245,8 @@ Qualtrics.SurveyEngine.addOnload(function()
     q_resp: "${q://QID7/SelectedChoicesRecode}",
     item_num: "${e://Field/item_num}"
   };
-  
-  console.log("API sent:", answers);
+  const catName = "${q://QID1/ChoiceTextEntryValue}"; // CAT name
+  //console.log("API sent:", answers);
     // CALL
     fetch("https://qualcat.duckdns.org/api/v0/cat", {
     method: "POST",
@@ -265,8 +265,8 @@ Qualtrics.SurveyEngine.addOnload(function()
     Qualtrics.SurveyEngine.setEmbeddedData("iter", data.iter);
     Qualtrics.SurveyEngine.setEmbeddedData("next_q", data.item);
     Qualtrics.SurveyEngine.setEmbeddedData("item_num", data.item_num);
-    Qualtrics.SurveyEngine.setEmbeddedData("SE_Score_" + catName, data.se_thetahat);
-    Qualtrics.SurveyEngine.setEmbeddedData("Score_" + catName, data.thetahat);  
+        Qualtrics.SurveyEngine.setEmbeddedData("SE_Score_" + catName, data["SE_Score_" + catName]);
+    Qualtrics.SurveyEngine.setEmbeddedData("Score_" + catName, data["Score_" + catName]); 
     Qualtrics.SurveyEngine.setEmbeddedData("pat", data.pat);
     Qualtrics.SurveyEngine.setEmbeddedData("J", data.pat.length);
     Qualtrics.SurveyEngine.setEmbeddedData("adm_items", data.iter);
@@ -298,7 +298,7 @@ Make sure that the internal ID of the question in the "Question" block, `QID7` i
 ![](images2/n22.png){width="100%"}
 :::
 
-::: {.column width="60%"}
+::: {.column width="40%"}
 ![](images2/n23.png){width="100%"}
 :::
 :::
@@ -380,7 +380,30 @@ Scrolling down, the **Group: Loop** should be duplicated 19 times.
 
 ![](images2/flow.gif)
 
-Then click **Apply** to apply this flow set up to the survey.
+------------------------------------------------------------------------
+
+Then, at the top of Survey Flow, on the **Setup block**,
+
+1.  click Add Below,
+2.  and select Embedded Data to insert two new embedded data fields.
+
+![](images2/nn1.png)
+
+Name the first field `Score_` followed by the test name; in this example, `Score_PPSE`. Here, “score” refers to the estimated $\hat{\theta}$ value.
+
+Add a second field named `SE_Score_` followed by the test name (here, `SE_Score_PPSE`). It holds the standard error of $\hat{\theta}$, as shown below.
+
+::: callout-important
+Write the test name directly after the underscore, with no space, and match its capitalization exactly, since field names are case-sensitive.
+:::
+
+![](images2/nn2.png)
+
+Then move this block to the top of the survey flow: click **Move** and drag it into place.
+
+![](images2/nn3.png)
+
+Lastly, click **Apply** in the bottom-right corner of the screen to apply this flow setup to the survey.
 
 ------------------------------------------------------------------------
 
@@ -392,7 +415,7 @@ Then click **Apply** to apply this flow set up to the survey.
 
 3.  Uncheck the options **Back Button** and **Allow respondents to finish later**
 
-![](images/Screenshot%202025-12-02%20at%2008.39.24.png)
+![](images2/n37_5.png)
 
 1.  Then go to '**Builder**' options again, and
 2.  click '**Publish**'
