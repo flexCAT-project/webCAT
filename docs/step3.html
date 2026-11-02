@@ -114,6 +114,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -457,7 +486,7 @@ Note
 <p><img src="images2/n12.png" class="img-fluid"></p>
 <p>This does not serve as an actual question; rather, it displays all the necessary information for the test participant.</p>
 <p>In this example we add some plain text for illustrative purpose:</p>
-<p><img src="images/Screenshot 2025-12-19 at 08.18.16.png" class="img-fluid"></p>
+<p><img src="images2/n12_5.png" class="img-fluid"></p>
 <hr>
 </section>
 <section id="step-3.3-extra-block-optional" class="level3">
@@ -680,7 +709,7 @@ Warning
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img src="images2/n22.png" class="img-fluid" style="width:100.0%"></p>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:40%;">
 <p><img src="images2/n23.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
@@ -728,7 +757,32 @@ Warning
 <p><img src="images2/n37.png" class="img-fluid"></p>
 <p>Scrolling down, the <strong>Group: Loop</strong> should be duplicated 19 times.</p>
 <p><img src="images2/flow.gif" class="img-fluid"></p>
-<p>Then click <strong>Apply</strong> to apply this flow set up to the survey.</p>
+<hr>
+<p>Then, at the top of Survey Flow, on the <strong>Setup block</strong>,</p>
+<ol type="1">
+<li>click Add Below,</li>
+<li>and select Embedded Data to insert two new embedded data fields.</li>
+</ol>
+<p><img src="images2/nn1.png" class="img-fluid"></p>
+<p>Name the first field <code>Score_</code> followed by the test name; in this example, <code>Score_PPSE</code>. Here, “score” refers to the estimated <span class="math inline">\(\hat{\theta}\)</span> value.</p>
+<p>Add a second field named <code>SE_Score_</code> followed by the test name (here, <code>SE_Score_PPSE</code>). It holds the standard error of <span class="math inline">\(\hat{\theta}\)</span>, as shown below.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write the test name directly after the underscore, with no space, and match its capitalization exactly, since field names are case-sensitive.</p>
+</div>
+</div>
+<p><img src="images2/nn2.png" class="img-fluid"></p>
+<p>Then move this block to the top of the survey flow: click <strong>Move</strong> and drag it into place.</p>
+<p><img src="images2/nn3.png" class="img-fluid"></p>
+<p>Lastly, click <strong>Apply</strong> in the bottom-right corner of the screen to apply this flow setup to the survey.</p>
 <hr>
 </section>
 <section id="step-3.8---publish-the-testsurvey" class="level3">
@@ -738,7 +792,7 @@ Warning
 <li><p>Select ’<strong>Responses’</strong></p></li>
 <li><p>Uncheck the options <strong>Back Button</strong> and <strong>Allow respondents to finish later</strong></p></li>
 </ol>
-<p><img src="images/Screenshot 2025-12-02 at 08.39.24.png" class="img-fluid"></p>
+<p><img src="images2/n37_5.png" class="img-fluid"></p>
 <ol type="1">
 <li>Then go to ‘<strong>Builder</strong>’ options again, and</li>
 <li>click ‘<strong>Publish</strong>’</li>

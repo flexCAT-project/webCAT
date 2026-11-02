@@ -369,7 +369,7 @@ function downloadData() {
   
   let url = `https://qualcat.duckdns.org/api/v0/get-data?catName=${encodeURIComponent(params.catName)}&from=${encodeURIComponent(params.from)}&to=${encodeURIComponent(params.to)}`
 
-  //console.log(url) //debug
+  console.log(url) //debug
   fetch(url, {
     method: "GET",
     headers: {"x-api-key": token   
